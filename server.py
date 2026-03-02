@@ -2,7 +2,7 @@ import socket
 
 def connect():
     Mysocket = socket.socket()
-    Mysocket.bind(("192.168.81.128", 8080))
+    Mysocket.bind(("MY IP ADDRESS", 8080))
     Mysocket.listen(1)
     print("[+] Listening for income TCP connection on port 8080")
     connection, address = Mysocket.accept()

